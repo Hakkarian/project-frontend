@@ -8,7 +8,7 @@ import filterReducer from './filters/filter-slice';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['token'],
+  whitelist: ['token', 'avatarURL'],
 };
 
 const persistedReducer = persistReducer(persistConfig, authReducer);
