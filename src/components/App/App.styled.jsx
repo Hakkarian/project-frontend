@@ -31,8 +31,11 @@ export const FormCss = styled.form`
 
   text-align: center;
 
-  border: 1px solid #fff;
+
   border-radius: 5px;
+
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
 `;
 
 export const ContactFlexCss = styled.div`

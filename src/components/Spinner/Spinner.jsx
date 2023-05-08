@@ -8,7 +8,7 @@ const Spinner = () => {
     height = "800"
     width = "800"
     radius = "9"
-    color = "yellow"
+    color = "#fff300"
     ariaLabel = "loading"
 
         />

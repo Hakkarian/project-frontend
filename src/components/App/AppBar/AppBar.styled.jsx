@@ -2,17 +2,18 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const HeaderCss = styled.header`
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100vw;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    background-color: #313131;
-`
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+`;
 
 export const NavLinkCss = styled(NavLink)`
   position: relative;
@@ -35,7 +36,7 @@ export const NavLinkCss = styled(NavLink)`
     width: 100%;
     height: 3px;
     margin-top: 3px;
-    background-color: yellow;
+    background-color: #fff300;
     transform: scale(0);
 
     transition: transform 250ms linear;
@@ -45,6 +46,6 @@ export const NavLinkCss = styled(NavLink)`
   }
 
   &.active {
-    color: yellow;
+    color: #fff300;
   }
 `;

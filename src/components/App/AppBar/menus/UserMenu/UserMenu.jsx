@@ -24,6 +24,7 @@ const UserMenu = () => {
         <div
           style={{
             display: 'flex',
+            flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '10px',

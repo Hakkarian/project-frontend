@@ -15,22 +15,26 @@ export const ContactItemCss = styled.li`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  
+
   min-width: calc(50% - 2 * 20px);
   height: 60px;
   padding: 10px;
 
-  background-color: #313131;
-  color: #fff;
+  background-image: linear-gradient(#fff300, #007c44);
+  color: #000;
 
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px #303030;
+  box-shadow: 1px 1px 1px 1px #000;
 
-  transition: background-color 250ms linear, box-shadow 250ms linear;
+  transition: background-color 250ms ease-in-out, color 250ms linear,
+    box-shadow 250ms linear, outline 250ms linear;
 
   &:hover,
   &:focus {
+    background-image: none;
     background-color: #000;
-    box-shadow: 0px 0px 0px 0px #303030;
+    color: #fff;
+    outline: 1px dashed #fff;
+    box-shadow: 0px 0px 0px 0px #000;
   }
 `;

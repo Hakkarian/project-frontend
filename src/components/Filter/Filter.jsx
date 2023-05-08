@@ -9,7 +9,7 @@ const Filter = () => {
 
   const handleFilterChange = e =>
     dispatch(filterSlice.actions.settedFilter(e.target.value));
-
+  
   return (
     <InputCss
       variant="filled"

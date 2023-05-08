@@ -17,15 +17,19 @@ export const ContactFormCss = styled.form`
   font-weight: 600;
   line-height: 1;
 
-  background-color: #313131;
+  background-image: linear-gradient(#fff300, #007c44);
+  color: #000;
 
   border-radius: 5px;
+  border: 5px dashed black;
 
-  transition: box-shadow 250ms linear;
+  transition: box-shadow 250ms linear, border 250ms linear,
+    background-color 250ms linear, color 250ms linear;
 
   &:hover,
   &:focus {
-    box-shadow: 1px 1px 1px 3px #292929;
+    background-color: #fff;
+    border: 10px dashed black;
   }
 `;
 

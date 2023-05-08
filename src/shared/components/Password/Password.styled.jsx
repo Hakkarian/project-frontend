@@ -4,7 +4,7 @@ import { ButtonCss } from 'components/App/App.styled';
 
 export const InputCss = styled(TextField)`
   margin-bottom: 20px;
-  color: orange;
+  color: #FFF;
   text-align: center;
 
   &.MuiFormLabel-root {

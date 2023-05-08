@@ -65,6 +65,7 @@ const authSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(checkUpdate.fulfilled, (state, { payload }) => {
+        console.log(payload)
         state.isLoading = false;
         state.user = payload;
         state.verify = true;
