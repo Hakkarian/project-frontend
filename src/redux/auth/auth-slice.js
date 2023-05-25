@@ -52,10 +52,10 @@ const authSlice = createSlice({
       .addCase(logout.fulfilled, state => {
         state.isLoading = false;
         state.user = {};
+        state.verify = true;
         state.token = '';
         state.avatarURL = '';
         state.verify = false;
-        state.isRegister = false;
       })
       .addCase(logout.rejected, (state, { payload }) => {
         state.isLoading = false;
@@ -64,21 +64,16 @@ const authSlice = createSlice({
       .addCase(checkUpdate.pending, state => {
         state.isLoading = true;
       })
-      .addCase(checkUpdate.fulfilled, (state, { payload }) => {
-        console.log(payload)
-        state.isLoading = false;
-        state.user = payload;
-        state.verify = true;
-      })
-      //   .addCase(checkUpdate.fulfilled, (state, { payload }) => {
-      //     const { user, token } = payload;
-      //     state.isLoading = false;
-      //     state.user = user;
-      //     state.token = token;
-      //     state.isRegister = true;
-      //   })
+
+        .addCase(checkUpdate.fulfilled, (state, { payload }) => {
+          const { user, token } = payload;
+          state.isLoading = false;
+          state.user = user;
+          state.token = token;
+          state.isRegister = true;
+        })
       .addCase(checkUpdate.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isLoading = true;
         state.error = payload;
       });
   },

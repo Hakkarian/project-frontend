@@ -1,10 +1,10 @@
 import PrivateRoute from "views/PrivateView";
 import { lazy, Suspense } from "react";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { checkUpdate } from "redux/auth/auth-operations";
-import { Container, SpinnerWrap } from "./App.styled";
+import { Container } from "./App.styled";
 import AppBar from "./AppBar";
 import PublicView from "views/PublicView";
 import Spinner from "components/Spinner";
@@ -18,13 +18,12 @@ const LoginView = lazy(() => import("../../views/LoginView"));
 const RegisterView = lazy(() => import("../../views/RegisterView"));
 
 const App = () => {
-  const state = useSelector(state => state);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(checkUpdate());
-  }, []);
+  }, [dispatch]);
 
 
 
@@ -37,9 +36,7 @@ const App = () => {
       <Container>
         <Suspense
           fallback={
-            <SpinnerWrap>
               <Spinner />
-            </SpinnerWrap>
           }
         >
           <Routes>

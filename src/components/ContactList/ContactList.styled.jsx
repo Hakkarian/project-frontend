@@ -20,7 +20,7 @@ export const ContactItemCss = styled.li`
   height: 60px;
   padding: 10px;
 
-  background-image: linear-gradient(#fff300, #007c44);
+  background-image: linear-gradient(#fff300, #4fffb0);
   color: #000;
 
   border-radius: 5px;

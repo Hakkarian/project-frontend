@@ -1,13 +1,12 @@
-import toastr from 'toastr';
 import { useState } from 'react';
 import {
+  BlackTitle,
   ContactFormCss,
   CreateButtonCss,
 } from './ContactForm.styled';
 import {
 
   CenterHorizontalCss,
-  TitleCss,
 } from 'components/App/App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAllContacts } from 'redux/tasks/cont-selectors';
@@ -81,7 +80,7 @@ const ContactForm = () => {
   return (
     <CenterHorizontalCss>
       <ContactFormCss onSubmit={handleSubmit}>
-        <TitleCss>Enter your contact</TitleCss>
+        <BlackTitle>Enter your contact</BlackTitle>
         <InputCss
           {...fields.contact}
           onChange={handleInputChange}

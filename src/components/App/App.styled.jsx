@@ -79,10 +79,3 @@ export const ButtonCss = styled.button`
     color: #fff200;
   }
 `;
-
-export const SpinnerWrap = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-25%, -50%);
-`

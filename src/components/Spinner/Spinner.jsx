@@ -1,10 +1,9 @@
-
-import {LineWave} from 'react-loader-spinner'
+import { SpinnerCss } from './Spinner.styled'
 
 
 const Spinner = () => {
 
-    return <LineWave 
+    return <SpinnerCss
     height = "800"
     width = "800"
     radius = "9"

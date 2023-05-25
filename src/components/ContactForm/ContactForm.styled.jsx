@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ButtonCss } from "components/App/App.styled";
+import { ButtonCss, TitleCss } from "components/App/App.styled";
 
 export const ContactFormCss = styled.form`
   display: flex;
@@ -17,11 +17,10 @@ export const ContactFormCss = styled.form`
   font-weight: 600;
   line-height: 1;
 
-  background-image: linear-gradient(#fff300, #007c44);
+  background-image: linear-gradient(#fff300, #4fffb0);
   color: #000;
 
   border-radius: 5px;
-  border: 5px dashed black;
 
   transition: box-shadow 250ms linear, border 250ms linear,
     background-color 250ms linear, color 250ms linear;
@@ -29,7 +28,6 @@ export const ContactFormCss = styled.form`
   &:hover,
   &:focus {
     background-color: #fff;
-    border: 10px dashed black;
   }
 `;
 
@@ -46,3 +44,7 @@ export const CreateButtonCss = styled(ButtonCss)`
     background-color: green;
   }
 `;
+
+export const BlackTitle = styled(TitleCss)`
+  color: #000;
+`

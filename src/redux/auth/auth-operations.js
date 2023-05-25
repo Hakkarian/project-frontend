@@ -4,17 +4,16 @@ import * as api from 'shared/services/auth';
 
 
 
-export const signup = createAsyncThunk("users/register", async (data, { rejectWithValue }) => {
+export const signup = createAsyncThunk("users/register", async (data, { dispatch, rejectWithValue }) => {
     try {
         const result = await api.signup(data);
-        toast('Success! Now you can login.', {
-          icon: '😊',
-          style: {
-            borderRadius: '10px',
-            background: 'darkgreen',
-            color: '#fff',
-          },
-        });
+
+      const loginData = {
+        email: data.email,
+        password: data.password
+      }
+      console.log(loginData)
+      await dispatch(signin(loginData))
         return result;
     } catch ({ response }) {
       if (response.data.message === 'Email in use') {
