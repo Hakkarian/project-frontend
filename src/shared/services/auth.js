@@ -31,8 +31,11 @@ export const logout = async () => {
 
 export const checkState = async token => {
   try {
+    console.log('before token')
     setToken(token);
-      const { data } = await instance.get(`/users/current`);
+    console.log('after token');
+    const { data } = await instance.get(`/users/current`);
+    console.log('auth api', data)
     return data;
   } catch (error) {
     setToken();

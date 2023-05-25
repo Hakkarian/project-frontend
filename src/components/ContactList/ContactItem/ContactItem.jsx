@@ -1,5 +1,3 @@
-import toastr from 'toastr';
-
 import PropTypes from 'prop-types';
 
 import { ContactTextCss, DeleteButtonCss } from './ContactItem.styled';

@@ -9,7 +9,7 @@ const AuthCover = ({ children }) => {
 
     useEffect(() => {
         dispatch(checkUpdate());
-    }, [])
+    }, [dispatch])
 
     return <>{children}</>
 }

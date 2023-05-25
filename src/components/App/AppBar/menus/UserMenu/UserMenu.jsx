@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { logout } from "redux/auth/auth-operations";
 import { selectUser, selectisAvatar } from "redux/auth/auth-selectors";
 import { UserContainerCss, UserTitle, UserWrapCss } from "./UserMenu.styled";
-import { useEffect, useState } from "react";
-import { instance } from "shared/services/auth";
+import { useState } from "react";
 import { ModalOpenCss } from "components/Modal/Modal.styled";
 import Modal from "components/Modal";
 

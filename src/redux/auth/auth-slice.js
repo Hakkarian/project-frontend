@@ -11,7 +11,6 @@ const authSlice = createSlice({
     verificationToken: '',
     isLoading: false,
     error: null,
-    isRegister: false,
   },
   extraReducers: builder => {
     builder
@@ -25,7 +24,6 @@ const authSlice = createSlice({
         state.avatarURL = avatarURL;
         state.verificationToken = verificationToken;
         state.token = token;
-        state.isRegister = true;
       })
       .addCase(signup.rejected, (state, { payload }) => {
         state.isLoading = false;
@@ -66,11 +64,13 @@ const authSlice = createSlice({
       })
 
         .addCase(checkUpdate.fulfilled, (state, { payload }) => {
-          const { user, token } = payload;
+          const { user } = payload;
+          console.log('auth-slice', payload)
           state.isLoading = false;
           state.user = user;
-          state.token = token;
-          state.isRegister = true;
+          state.token = user.token;
+          state.avatarURL = user.avatarURL;
+          state.verify = true;
         })
       .addCase(checkUpdate.rejected, (state, { payload }) => {
         state.isLoading = true;

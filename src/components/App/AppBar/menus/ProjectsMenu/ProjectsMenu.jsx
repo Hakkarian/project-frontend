@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectIsUserLogin, selectIsUserVerified } from "redux/auth/auth-selectors";
+import { selectIsUserVerified } from "redux/auth/auth-selectors";
 import { NavLinkCss } from "../../AppBar.styled";
 import { ProjectsContainerCss } from "./ProjectsMenu.styled";
 

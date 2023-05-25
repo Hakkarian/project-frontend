@@ -1,9 +1,6 @@
 import PrivateRoute from "views/PrivateView";
 import { lazy, Suspense } from "react";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { checkUpdate } from "redux/auth/auth-operations";
 import { Container } from "./App.styled";
 import AppBar from "./AppBar";
 import PublicView from "views/PublicView";
@@ -18,15 +15,6 @@ const LoginView = lazy(() => import("../../views/LoginView"));
 const RegisterView = lazy(() => import("../../views/RegisterView"));
 
 const App = () => {
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(checkUpdate());
-  }, [dispatch]);
-
-
-
   return (
     <>
       <div>

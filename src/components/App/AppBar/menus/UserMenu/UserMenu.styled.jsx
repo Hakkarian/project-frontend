@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { TitleCss } from "components/App/App.styled";
 
 export const UserContainerCss = styled.div`
   display: flex;

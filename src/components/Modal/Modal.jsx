@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import { BackdropCss, ModalCss } from './Modal.styled';
 
 const Modal = ({closeModal, email, open}) => {

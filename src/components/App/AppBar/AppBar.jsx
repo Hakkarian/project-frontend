@@ -1,6 +1,6 @@
 
 import { useSelector } from "react-redux";
-import { selectIsUserLogin, selectIsUserVerified } from "redux/auth/auth-selectors";
+import { selectIsUserVerified } from "redux/auth/auth-selectors";
 import { HeaderCss } from "./AppBar.styled";
 import AuthMenu from "./menus/AuthMenu";
 import ProjectsMenu from "./menus/ProjectsMenu";
