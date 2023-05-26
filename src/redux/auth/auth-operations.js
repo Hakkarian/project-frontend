@@ -7,7 +7,14 @@ import * as api from 'shared/services/auth';
 export const signup = createAsyncThunk("users/register", async (data, { dispatch, rejectWithValue }) => {
     try {
         const result = await api.signup(data);
-
+        toast('Success! Now you can login', {
+          icon: '😊',
+          style: {
+            borderRadius: '10px',
+            background: 'green',
+            color: '#fff',
+          },
+        });
       const loginData = {
         email: data.email,
         password: data.password
