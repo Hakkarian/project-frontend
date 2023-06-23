@@ -10,6 +10,8 @@ A multipage application using React, Redux, Node.js, MongoDB, Mongoose and other
 
 ## Installation
 
+!important (Make sure you've installed a backend locally. Check out: https://github.com/Hakkarian/project-backend)
+
 - git clone https://github.com/Hakkarian/project-frontend.git app
 - cd app
 - npm i
