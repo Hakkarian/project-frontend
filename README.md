@@ -24,14 +24,14 @@ The multipage application is used to register and login the user. After user suc
 
 The multipage application consists of three pages - registration page, login page and contacts page.
 
-## Registration page
+Registration page
 
-Registration page allows user to login, after he passes necessary information (email, password).
+Allows user to login, after he passes necessary information (email, password).
 
-## Login page
+Login page
 
-Login page takes data from value, entered by user, sends it to the backend. If the request was succesful, user is redirecting to the contacts page. If data was incorrect, user fails to login and access to contacts page is denied.
+Takes data from value, entered by user, sends it to the backend. If the request was succesful, user is redirecting to the contacts page. If data was incorrect, user fails to login and access to contacts page is denied.
 
-## Contacts page
+Contacts page
 
 Consists of form submit, filter functionality and list of contacts with name and number.
